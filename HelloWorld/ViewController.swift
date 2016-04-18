@@ -10,16 +10,17 @@ import UIKit
 
 
 
+
 class ViewController: UIViewController {
     
-    
     @IBOutlet weak var nameTextfield: UITextField!
+    @IBOutlet weak var greetingLabel: UILabel!
+    
     
 
-    @IBOutlet weak var greetingLabel: UILabel!
+    
 
-
-    @IBAction func sayHelloButton(sender: AnyObject) {
+    @IBAction func sayHelloButton(sender: AnyObject?) {
         if let name = nameTextfield.text where !name.isEmpty {
             greetingLabel.text = "Grüß Dich, \(name)"
         } else {
@@ -27,5 +28,10 @@ class ViewController: UIViewController {
         }
 
     }
+    
+    @IBAction func editingChanged(sender: AnyObject) {
+        sayHelloButton(nil)
+    }
+    
 }
 
