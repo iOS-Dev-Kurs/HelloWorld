@@ -9,20 +9,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet var IBOutlet: UILabel!
 
-    @IBOutlet var greeting: UITextField!
-    @IBOutlet var text_field: UITextField!
-    @IBAction func sayhello(sender: AnyObject) {
-    }
-    @IBAction func myButton(sender: AnyObject) {
-        if let name = greeting.text where !name.isEmpty {
-            IBOutlet.text = "Hello"
+    @IBOutlet var label_text_out: UILabel!
+    
+
+    @IBOutlet var my_text_in: UITextField!
+  
+    @IBAction func pressi(sender: AnyObject) {
+        if let name = my_text_in.text {
+            label_text_out.text = "Hello"
         } else {
-            IBOutlet.text = "Hello , World"
+            label_text_out.text = "Hello , World"
         }
-    }
-    @IBAction func sayHelloButtonPressed(sender: AnyObject) {
-    }
-}
 
+    }
+    
+
+}
