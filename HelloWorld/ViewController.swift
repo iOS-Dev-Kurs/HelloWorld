@@ -8,13 +8,7 @@
 
 import UIKit
 
-func changeName() -> Void {
-    if let name = nameTextfield.text where !name.isEmpty {
-        greetingLabel.text = "Grüß Dich, \(name)"
-    } else {
-        greetingLabel.text = "Geben Sie Ihren Namen ein."
-    }
-}
+
 
 class ViewController: UIViewController {
     
@@ -26,7 +20,12 @@ class ViewController: UIViewController {
 
 
     @IBAction func sayHelloButton(sender: AnyObject) {
-        changeName();
+        if let name = nameTextfield.text where !name.isEmpty {
+            greetingLabel.text = "Grüß Dich, \(name)"
+        } else {
+            greetingLabel.text = "Geben Sie Ihren Namen ein."
+        }
+
     }
 }
 
