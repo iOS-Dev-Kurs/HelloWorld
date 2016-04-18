@@ -8,7 +8,25 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+func changeName() -> Void {
+    if let name = nameTextfield.text where !name.isEmpty {
+        greetingLabel.text = "Grüß Dich, \(name)"
+    } else {
+        greetingLabel.text = "Geben Sie Ihren Namen ein."
+    }
+}
 
+class ViewController: UIViewController {
+    
+    
+    @IBOutlet weak var nameTextfield: UITextField!
+    
+
+    @IBOutlet weak var greetingLabel: UILabel!
+
+
+    @IBAction func sayHelloButton(sender: AnyObject) {
+        changeName();
+    }
 }
 

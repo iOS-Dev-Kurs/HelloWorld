@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,11 +17,47 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zBY-DT-VEi">
+                                <rect key="frame" x="80" y="121" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hello World" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrY-xa-Hzm">
+                                <rect key="frame" x="80" y="35" width="89" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1Z-I4-Zuz">
+                                <rect key="frame" x="80" y="182" width="95" height="30"/>
+                                <state key="normal" title="Sag hallo"/>
+                                <connections>
+                                    <action selector="sayHelloButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EKH-LH-Gdj"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="e1Z-I4-Zuz" firstAttribute="top" secondItem="zBY-DT-VEi" secondAttribute="bottom" constant="20" id="2cB-dv-Dtg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="e1Z-I4-Zuz" secondAttribute="trailing" id="7uN-vI-fuY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mrY-xa-Hzm" secondAttribute="trailing" id="Wu3-xc-F8e"/>
+                            <constraint firstItem="zBY-DT-VEi" firstAttribute="top" secondItem="mrY-xa-Hzm" secondAttribute="bottom" constant="20" id="lRy-yg-r4y"/>
+                            <constraint firstItem="mrY-xa-Hzm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="sU9-l8-xUa"/>
+                            <constraint firstItem="mrY-xa-Hzm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="uS9-QL-HFf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zBY-DT-VEi" secondAttribute="trailing" id="vUh-Tl-JfI"/>
+                            <constraint firstItem="e1Z-I4-Zuz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wPR-qV-8dq"/>
+                            <constraint firstItem="zBY-DT-VEi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="xrW-as-xet"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greetingLabel" destination="mrY-xa-Hzm" id="eCo-n9-gd7"/>
+                        <outlet property="nameTextfield" destination="zBY-DT-VEi" id="tK2-V0-NTc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="378" y="324"/>
         </scene>
     </scenes>
 </document>
