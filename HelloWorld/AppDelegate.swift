@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Dieser Code wird beim Start der App ausgeführt
         
+        print("Hello World")
+        
         return true
     }
 
