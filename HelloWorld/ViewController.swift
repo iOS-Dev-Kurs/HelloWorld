@@ -9,6 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var greetingLabel: UITextField!
 
-}
+    @IBOutlet weak var nameTextfield: UILabel!
+    @IBAction func sayHelloButtonPressed(sender: AnyObject) {
+        if  let name = greetingLabel.text  {
+            nameTextfield.text = "Hello \(name)"}
+        else{
+            nameTextfield.text="Hello World!"
+        }
+        }
+    }
+
 
