@@ -41,7 +41,7 @@
                     </view>
                     <connections>
                         <outlet property="fsdfasd" destination="Pm2-u1-SEC" id="RzU-S9-uBS"/>
-                        <outlet property="greetingLabel" destination="aIi-ff-skQ" id="5mJ-qH-zIy"/>
+                        <outlet property="greetingLabel" destination="aIi-ff-skQ" id="IDo-bR-nTc"/>
                         <outlet property="greetinglabel" destination="8bC-Xf-vdC" id="B7q-jz-yId"/>
                         <outlet property="textfield" destination="aIi-ff-skQ" id="0mL-mq-isw"/>
                     </connections>
