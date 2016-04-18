@@ -10,5 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var enteredName: UITextField!
+    @IBOutlet weak var sayHello: UIButton!
+    @IBOutlet weak var shownLabel: UILabel!
+    
+    @IBAction func sayHelloTouched(sender: AnyObject) {
+        if let name = enteredName.text where !name.isEmpty{
+            shownLabel.text = "Hello \(name)"
+        }
+        else {
+            shownLabel.text = "Hello World!"
+        }
+    }
+    
 }
 
