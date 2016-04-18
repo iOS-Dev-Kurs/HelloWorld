@@ -9,6 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+//
+    @IBOutlet weak var myTextField: UITextField!
+    @IBOutlet weak var myLabel: UILabel!
+    @IBAction func myButton(sender: AnyObject) {
+        
+        if let name = myTextField.text {
+            myLabel.text = "hello \(name)"
+        } else {
+            myLabel.text = "hello world"
+        }
+    }
 }
 
