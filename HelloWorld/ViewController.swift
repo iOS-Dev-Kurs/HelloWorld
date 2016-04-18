@@ -29,6 +29,7 @@ class ViewController: UIViewController {
 
     }
     
+    // Automatisch bei Änderung des Textfeldes
     @IBAction func editingChanged(sender: AnyObject) {
         sayHelloButton(nil)
     }
