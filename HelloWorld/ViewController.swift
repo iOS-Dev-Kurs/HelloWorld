@@ -9,6 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
+   
 
+    @IBOutlet weak var nameTextfield: UITextField!
+    @IBOutlet weak var label: UILabel!
+    
+    
+    @IBAction func buttonPressed(_ sender: Any) {
+        
+        if let name=nameTextfield.text, !name.isEmpty {
+            label.text = "Hello \(name)"
+        } else {
+            label.text = "Hello World"
+        }
+            
+        
+        
+    }
 }
 
