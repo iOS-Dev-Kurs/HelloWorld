@@ -10,5 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var nameTextfield: UITextField!
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    
+    @IBAction func greetingButton(_ sender: Any) {
+        if let name = nameTextfield.text, !name.isEmpty {
+            nameLabel.text = "Hello \(name)!"
+        } else {
+            nameLabel.text = "Hello World!"
+        }
+        
+    }
+    
 }
 
